@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  has_many :event_member
+  has_many :event_members
   has_many :users, through: :event_member
 
   validates :event_title, : true
