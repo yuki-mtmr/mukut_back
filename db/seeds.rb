@@ -1,37 +1,36 @@
 Event.create!(
-  owner_id: "5",
-  event_title: "サッカー",
-  overview: "asdfghj",
-  start_datetime:"2020-4-5 15:00",
-  end_datetime:"2020-4-5 17:00",
-  place:"Tokyo",
-  fee:"3000",
-  max_member:"20000"
-  )
-
-Event.create!(
-  owner_id: "3",
-  event_title: "プログラミング",
-  overview: "lkjhgfds",
-  start_datetime:"2020-5-6 15:00",
-  end_datetime:"2020-5-6 17:00",
-  place:"Osaka",
-  fee:"0",
-  max_member:"14"
-  )
-
-  Event.create!(
-    owner_id: "3",
-    event_title: "バスケット",
-    overview: "mnbvcxz",
-    start_datetime:"2020-6-6 15:00",
-    end_datetime:"2020-6-6 17:00",
-    place:"Nagoya",
-    fee:"1000",
-    max_member:"5"
-    )
-
-    Event.create!(
+  [
+    {
+      owner_id: "5",
+      event_title: "サッカー",
+      overview: "asdfghj",
+      start_datetime:"2020-4-5 15:00",
+      end_datetime:"2020-4-5 17:00",
+      place:"Tokyo",
+      fee:"3000",
+      max_member:"20000"
+    },
+    {
+      owner_id: "3",
+      event_title: "プログラミング",
+      overview: "lkjhgfds",
+      start_datetime:"2020-5-6 15:00",
+      end_datetime:"2020-5-6 17:00",
+      place:"Osaka",
+      fee:"0",
+      max_member:"14",
+    },
+    {
+      owner_id: "3",
+      event_title: "バスケット",
+      overview: "mnbvcxz",
+      start_datetime:"2020-6-6 15:00",
+      end_datetime:"2020-6-6 17:00",
+      place:"Nagoya",
+      fee:"1000",
+      max_member:"5",
+    },
+    {
       owner_id: "3",
       event_title: "プログラミング",
       overview: "asdfghj",
@@ -39,5 +38,7 @@ Event.create!(
       end_datetime:"2020-7-6 17:00",
       place:"Osaka",
       fee:"0",
-      max_member:"5"
-      )
+      max_member:"5",
+    }
+  ]
+)
