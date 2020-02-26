@@ -3,11 +3,11 @@ module Api
     class EventsController < ApplicationController
       def index
         @events = Event.all.order(created_at: :desc)
-        render json: { status: 'SUCCESS', message: 'Loaded events', data: @events }
+        render json: @events
       end
 
       def show
-        render json: { status: 'SUCCESS', message: 'Loaded the event', data: @event }
+        render json: @event
       end
 
       def create
