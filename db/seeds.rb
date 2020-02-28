@@ -43,7 +43,7 @@
 #     {
 #       owner_id: "2",
 #       event_title: "野球",
-#       overview: "hjujyejj"",
+#       overview: "hjujyejj",
 #       start_datetime:"2020-3-6 11:00",
 #       end_datetime:"2020-3-6 16:00",
 #       place:"Okinawa",
