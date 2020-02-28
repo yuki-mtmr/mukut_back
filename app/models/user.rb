@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :event_members
+  has_many :events, through: :event_member
+
   before_save :downcase_email
   validates :user_name, presence: true, uniqueness: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
