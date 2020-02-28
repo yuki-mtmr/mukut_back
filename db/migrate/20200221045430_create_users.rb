@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string "email", null: false
       t.string "gender"
       t.date "birthday"
-      t.integer "busy_daytime_id"
+      t.integer "busy_daytime_id" #googleCalenderTableを作るなら必要ない？
       t.timestamps
     end
   end
