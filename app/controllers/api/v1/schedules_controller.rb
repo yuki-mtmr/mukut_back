@@ -2,6 +2,8 @@ module Api
   module V1
     class SchedulesController < ApplicationController
 
+			# gitからherokuへの自動反映確認行
+
       def index
         @schedules = Schedule.group(:busy_day).count(:busy_day)
         render json: @schedules
@@ -12,7 +14,8 @@ module Api
         schedule = Schedule.new(schedule_params)
         schedule.busy_day = date
         schedule.user_id = rand(1000..9999)
-        
+				# binding.pry
+
         if schedule.save
           render json: { status: 'SUCCESS', data: schedule }
         else
