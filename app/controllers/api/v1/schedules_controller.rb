@@ -8,7 +8,7 @@ module Api
       end
 
       def create
-        date = params[:start][:dateTime]
+        date = params[:start][:date]
         schedule = Schedule.new(schedule_params)
         schedule.busy_day = date
         schedule.user_id = rand(1000..9999)
