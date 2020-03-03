@@ -8,7 +8,11 @@ module Api
       end
 
       def create
+        date = params[:start][:dateTime]
         schedule = Schedule.new(schedule_params)
+        schedule.busy_day = date
+        schedule.user_id = rand(1000..9999)
+        
         if schedule.save
           render json: { status: 'SUCCESS', data: schedule }
         else
