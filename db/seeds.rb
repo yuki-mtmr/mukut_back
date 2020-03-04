@@ -77,7 +77,7 @@
   Schedule.create(
     [
       {
-        busy_day: "2020-3-#{num}",
+        busy_day: "2020-03-#{num}",
         user_id: "10000",
       }
     ]
