@@ -10,11 +10,16 @@ module Api
       end
 
       def create
-        date = params[:start][:date]
+				date = nil
+				if params[:start][:dateTime]
+					date = params[:start][:dateTime]	# date -> yyyy-mm-ddThh:mm:ss.s+09:00
+					date = date.to_s.slice(0,10)
+				else
+					date = params[:start][:date]
+				end
         schedule = Schedule.new(schedule_params)
         schedule.busy_day = date
         schedule.user_id = rand(1000..9999)
-				# binding.pry
 
         if schedule.save
           render json: { status: 'SUCCESS', data: schedule }
