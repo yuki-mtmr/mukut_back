@@ -24,7 +24,7 @@ module MukutBack
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-         origins '*'
+         origins 'localhost:3000', 'localhost:3001', 'https://mukut-front.herokuapp.com/'
          resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options, :head]
        end
     end
